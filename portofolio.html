@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio - Put Sal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #3f51b5;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .profile-img {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #3f51b5;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Put Sal</h1>
+    <p>Mahasiswa Teknik Informatika | Mobile & Backend Developer</p>
+    <img src="profil.jpg" alt="Foto Profil" class="profile-img">
+  </header>
+
+  <section>
+    <h2>Tentang Saya</h2>
+    <p>
+      Saya adalah mahasiswa semester 6 dengan minat pada pengembangan aplikasi mobile dan backend.
+      Saya aktif mengerjakan berbagai proyek menggunakan Flutter dan Node.js, serta memiliki ketertarikan dalam pengembangan sistem pendukung keputusan (SPK).
+    </p>
+  </section>
+
+  <section>
+    <h2>Projek</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Feluna</h3>
+        <p>Aplikasi mobile pelacak menstruasi dan deteksi pose menggunakan Flutter & TensorFlow Lite.</p>
+      </div>
+      <div class="project-card">
+        <h3>Sistem Pendukung Keputusan Petshop</h3>
+        <p>SPK menggunakan metode SAW dan AHP untuk membantu memilih petshop terbaik.</p>
+      </div>
+      <div class="project-card">
+        <h3>Game 2D "The Marionette’s Lament"</h3>
+        <p>Game horor misteri berbasis cerita dengan atmosfer emosional dan karakter interaktif.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kontak</h2>
+    <p>Email: putsal@example.com</p>
+    <p>GitHub: <a href="https://github.com/putsal" target="_blank">github.com/putsal</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/putsal" target="_blank">linkedin.com/in/putsal</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Put Sal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
