@@ -130,6 +130,8 @@ nav a:hover {
   margin: 0 1rem;
 }
 
+
+
 /* Box CV */
 .cv-box {
   flex-direction: row;
@@ -229,6 +231,7 @@ footer .social-icons a:hover {
   position: relative;
   width: 300px;
   margin-right: 2rem;
+  
 }
 
 .slider-wrapper {
@@ -238,7 +241,8 @@ footer .social-icons a:hover {
 
 .slider-img {
   display: none;
-  width: 300px;
+  width: 100%;
+  max-width: 500px;;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -277,6 +281,53 @@ footer .social-icons a:hover {
   right: -2rem;
 }
 
+/* Untuk image slider landscape agar ukurannya setengah box */
+.image-slider.landscape {
+  width: 50%;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Gambar landscape seukuran setengah box */
+.slider-img.landscape {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Panah geser diberi posisi agar tidak nempel */
+.image-slider.landscape .prev-btn {
+  left: -2rem;
+}
+
+.image-slider.landscape .next-btn {
+  right: -2rem;
+}
+
+/* Responsif: Gambar jadi 100% di mobile */
+@media (max-width: 768px) {
+  .content-box.reverse {
+    flex-direction: column-reverse;
+  }
+
+  .image-slider.landscape {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .slider-img.landscape {
+    width: 100%;
+  }
+}
+
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .content-box {
@@ -291,6 +342,19 @@ footer .social-icons a:hover {
 
   .content-text.right-text {
     text-align: center;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  /* Geser panah biar tetap bagus */
+  .prev-btn {
+    left: 0;
+  }
+
+  .next-btn {
+    right: 0;
   }
 
   
