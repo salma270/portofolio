@@ -1,0 +1,297 @@
+:root {
+  --color1: #EDEAF5;
+  --color2: #B39CC7;
+  --color3: #CEACC4;
+  --color4: #CD9399;
+  --color5: #C4849D;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color1);
+  color: #333;
+}
+
+header {
+  background-color: var(--color2);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color5);
+}
+
+.home-section {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: var(--color1);
+}
+
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--color3);
+  box-shadow: 0 0 20px var(--color3);
+}
+
+.decor-circle {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px dashed var(--color4);
+  top: -20px;
+  left: -20px;
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.content-box {
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.content-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-text {
+  flex: 1;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.content-text.justify p {
+  text-align: justify;
+}
+
+.content-text.right-text {
+  text-align: right;
+}
+
+.shifted-text {
+  margin-right: 2rem; /* geser ke kiri */
+}
+
+
+.content-img {
+  width: 120px;
+  height: 120px;
+  background-color: var(--color5);
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+
+/* Box CV */
+.cv-box {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cv-box .content-img {
+  margin-left: 2rem;
+  margin-right: 0;
+}
+
+.skill-box-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Skill box teks rata tengah */
+.skill-box-container .skill-box {
+  flex: 1;
+  background-color: var(--color1);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.skill-box h4 {
+  margin-bottom: 0.5rem;
+}
+
+.skill-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-box li {
+  margin-bottom: 0.3rem;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--color5);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--color4);
+}
+
+footer {
+  background-color: var(--color2);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .social-icons {
+  margin: 1rem 0;
+}
+
+footer .social-icons a {
+  margin: 0 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: var(--color5);
+}
+
+.justify {
+  text-align: justify;
+}
+
+.feature-list {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.feature-list.justify li {
+  text-align: justify;
+  margin-bottom: 0.8rem;
+}
+
+.image-slider {
+  position: relative;
+  width: 300px;
+  margin-right: 2rem;
+}
+
+.slider-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.slider-img {
+  display: none;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-img.active {
+  display: block;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;            /* Hapus background */
+  color: var(--color4);        /* Warna sesuai tema */
+  border: none;                /* Hapus border */
+  font-size: 2rem;             /* Ukuran panah */
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--color5);        /* Hover color */
+}
+
+.prev-btn {
+  left: -2rem;
+}
+
+.next-btn {
+  right: -2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-box {
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+  }
+
+  .cv-box {
+    flex-direction: column-reverse;
+  }
+
+  .content-text.right-text {
+    text-align: center;
+  }
+
+  
+}
